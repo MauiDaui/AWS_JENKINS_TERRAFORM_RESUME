@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    environment {
+    FIREBASE_DEPLOY_TOKEN = credentials('firebase-token')
+    }
+
+    stages{
+        stage('Building'){
+            steps{
+            echo 'Building'
+            }
+        } 
+
+         stage('Testing'){
+            steps{
+            	echo 'This is testing'
+            }
+        }
+    }
+}
